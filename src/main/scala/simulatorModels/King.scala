@@ -2,7 +2,7 @@ package simulatorModels
 
 class King extends Piece {
   override def move(initialPosition: Cell, board: ChessBoard): List[Cell] = {
-    val rowIndex = initialPosition.rowId.toString.toInt
+    val rowIndex = initialPosition.rowId
     val startIndex = 0
     val endIndex = 8
     val startAlphabet = 'A'
