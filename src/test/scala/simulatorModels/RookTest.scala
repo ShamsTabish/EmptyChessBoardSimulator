@@ -1,8 +1,9 @@
 package simulatorModels
 
 import org.scalatestplus.play.PlaySpec
+import util.TestHelpers
 
-class RookTest extends PlaySpec {
+class RookTest extends PlaySpec with TestHelpers{
   "Rook" should {
 
     "be able to Move Vertically (Up,down) and Horizontally (Left and Right) when it has cells all around" in {
@@ -51,10 +52,4 @@ class RookTest extends PlaySpec {
     }
   }
 
-  private def parseCells(expectedCellsAsString: String) = {
-    expectedCellsAsString
-      .split(", ")
-      .map(Cell(_).get)
-      .toList
-  }
 }
