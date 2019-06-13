@@ -11,8 +11,6 @@ object ChessSimulator extends App {
       val initialPosition: Cell = input._1
       val piece: Piece = input._2
       val test = new ChessBoard()
-
-      test.cells.map(println)
-      piece.move(initialPosition, test).map(println)
+      piece.move(initialPosition, test).mkString(", ").map(print)
   }
 }

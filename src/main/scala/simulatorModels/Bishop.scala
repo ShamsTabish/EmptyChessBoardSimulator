@@ -7,7 +7,6 @@ class Bishop extends Piece {
     val rowID = initialPosition.rowId
 
     val forwardDiagonals: List[Option[Cell]] = Range(1, endIndex + 1).flatMap { i =>
-      println()
       List(Cell((columnID + i).toChar.toString + (rowID + i)), Cell((columnID - i).toChar.toString + (rowID - i)))
     }.toList
     val forwardDiagonalCells = forwardDiagonals.filter(x => x != None).map(_.get)
