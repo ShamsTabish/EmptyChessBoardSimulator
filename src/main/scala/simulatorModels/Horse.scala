@@ -6,15 +6,15 @@ class Horse extends Piece {
     val rowID = initialPosition.rowId
 
     val adjacentCell = 1
-    val thirdCell = 3
-    val upLeft = Cell((columnID - adjacentCell).toChar.toString + (rowID + thirdCell))
-    val upRight = Cell((columnID + adjacentCell).toChar.toString + (rowID + thirdCell))
-    val rightDown = Cell((columnID - adjacentCell).toChar.toString + (rowID - thirdCell))
-    val rightUp = Cell((columnID + adjacentCell).toChar.toString + (rowID - thirdCell))
-    val downLeft = Cell((columnID - thirdCell).toChar.toString + (rowID - adjacentCell))
-    val downRight = Cell((columnID - thirdCell).toChar.toString + (rowID + adjacentCell))
-    val leftDown = Cell((columnID + thirdCell).toChar.toString + (rowID - adjacentCell))
-    val leftUp = Cell((columnID + thirdCell).toChar.toString + (rowID + adjacentCell))
+    val twoCells = 2
+    val upLeft = Cell((columnID - adjacentCell).toChar.toString + (rowID + twoCells))
+    val upRight = Cell((columnID + adjacentCell).toChar.toString + (rowID + twoCells))
+    val rightDown = Cell((columnID - adjacentCell).toChar.toString + (rowID - twoCells))
+    val rightUp = Cell((columnID + adjacentCell).toChar.toString + (rowID - twoCells))
+    val downLeft = Cell((columnID - twoCells).toChar.toString + (rowID - adjacentCell))
+    val downRight = Cell((columnID - twoCells).toChar.toString + (rowID + adjacentCell))
+    val leftDown = Cell((columnID + twoCells).toChar.toString + (rowID - adjacentCell))
+    val leftUp = Cell((columnID + twoCells).toChar.toString + (rowID + adjacentCell))
 
     List(upLeft, upRight, rightDown, rightUp, downLeft, downRight, leftDown, leftUp)
       .filter(_ != None)
